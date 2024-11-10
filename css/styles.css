@@ -1,0 +1,290 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+@font-face {
+  font-family: AlfaSlabOne-Regular;
+  src: url(../font/AlfaSlabOne-Regular.ttf);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  background-color: rgb(44, 44, 63);
+}
+.container {
+  width: 100%;
+  max-width: 120rem;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+.main-header {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  overflow: hidden;
+}
+.menu-btn {
+  background: none;
+  outline: none;
+  border: none;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 100;
+  width: 4rem;
+  height: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  transform: scale(0.8);
+  -webkit-transition: -webkit-transform 0.4s linear;
+  transition: -webkit-transform 0.4s linear;
+  -o-transition: transform 0.4s linear;
+  transition: transform 0.4s linear;
+  transition: transform 0.4s linear, -webkit-transform 0.4s linear;
+}
+.active .menu-btn {
+  -webkit-transform: scale(0.8) rotate(405deg);
+  -ms-transform: scale(0.8) rotate(405deg);
+  transform: scale(0.8) rotate(405deg);
+}
+.menu-btn:hover {
+  -webkit-transform: scale(1) rotate(180deg);
+  -ms-transform: scale(1) rotate(180deg);
+  transform: scale(1) rotate(180deg);
+}
+.active .menu-btn:hover {
+  -webkit-transform: scale(1) rotate(225deg);
+  -ms-transform: scale(1) rotate(225deg);
+  transform: scale(1) rotate(225deg);
+}
+.line {
+  display: block;
+  background-color: #fff;
+}
+.h-line {
+  width: 100%;
+  height: 0.2rem;
+}
+.v-line {
+  width: 0.2rem;
+  height: 100%;
+  position: absolute;
+}
+.line:nth-child(2) {
+  margin-top: 1rem;
+}
+.line:nth-child(3) {
+  -webkit-transform: translateX(-0.5rem) rotate(180deg);
+  -ms-transform: translateX(-0.5rem) rotate(180deg);
+  transform: translateX(-0.5rem) rotate(180deg);
+}
+.line:nth-child(4) {
+  -webkit-transform: translateX(0.5rem) rotate(180deg);
+  -ms-transform: translateX(0.5rem) rotate(180deg);
+  transform: translateX(0.5rem) rotate(180deg);
+}
+.navigation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #000;
+  -webkit-transform: scale(3) rotate(-15deg);
+  -ms-transform: scale(3) rotate(-15deg);
+  transform: scale(3) rotate(-15deg);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.5s, visibility 0.5s, -webkit-transform 1s;
+  transition: opacity 0.5s, visibility 0.5s, -webkit-transform 1s;
+  -o-transition: opacity 0.5s, visibility 0.5s, transform 1s;
+  transition: opacity 0.5s, visibility 0.5s, transform 1s;
+  transition: opacity 0.5s, visibility 0.5s, transform 1s, -webkit-transform 1s;
+}
+.active .navigation {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+  visibility: visible;
+}
+.nav {
+  width: 100%;
+  min-height: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 1rem;
+  z-index: 10;
+}
+
+.nav-link {
+  display: block;
+  font-family: AlfaSlabOne-Regular;
+  font-size: clamp(2.6rem, 10vw, 6rem);
+  color: #fff;
+  letter-spacing: 0.2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.nav-link:hover {
+  -webkit-transform: translateX(-2rem);
+  -ms-transform: translateX(-2rem);
+  transform: translateX(-2rem);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  -o-transition: transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+.letter {
+  display: inline-block;
+  color: #fff;
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+}
+.nav-link:hover .letter {
+  -webkit-animation: letterAnim 0.5s var(--i) forwards;
+  animation: letterAnim 0.5s var(--i) forwards;
+}
+@-webkit-keyframes letterAnim {
+  0% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+    color: #fff;
+  }
+
+  50% {
+    color: #e6a570;
+  }
+
+  100% {
+    -webkit-transform: translate(2rem, 0);
+    transform: translate(2rem, 0);
+    color: #ebe8c8;
+  }
+}
+@keyframes letterAnim {
+  0% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+    color: #fff;
+  }
+
+  50% {
+    color: #e6a570;
+  }
+
+  100% {
+    -webkit-transform: translate(2rem, 0);
+    transform: translate(2rem, 0);
+    color: #ebe8c8;
+  }
+}
+
+.header-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+  opacity: 0.2;
+  z-index: 1;
+}
+
+.header-img {
+  width: 50%;
+  max-width: 40rem;
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  -webkit-transform: translate(-50%, -50%) rotate(0deg);
+  -ms-transform: translate(-50%, -50%) rotate(0deg);
+  transform: translate(-50%, -50%) rotate(0deg);
+  opacity: 0.2;
+  z-index: 5;
+  -webkit-transition: left 1.5s linear, -webkit-transform 1.5s linear;
+  transition: left 1.5s linear, -webkit-transform 1.5s linear;
+  -o-transition: transform 1.5s linear, left 1.5s linear;
+  transition: transform 1.5s linear, left 1.5s linear;
+  transition: transform 1.5s linear, left 1.5s linear, -webkit-transform 1.5s linear;
+}
+
+@media (min-height: 700px) {
+  .nav-link {
+    font-size: clamp(2.6rem, 10vw, 8rem);
+  }
+}
